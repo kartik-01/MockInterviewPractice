@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Builds & caches
+dist/
+build/
+*.tsbuildinfo
+.vite/
+
+# Secrets — keep .env.example as the template only
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
