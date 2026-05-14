@@ -56,12 +56,12 @@ flowchart LR
 
 ### Environment
 
-Copy `.env.example` to **`candidate-assistant/.env`** and/or **`server/.env`**. The server loads **both** (package root first, then `server/.env` overrides) so keys can live next to the monorepo folder or beside the server entrypoint.
+Copy `.env.example` to **`.env`** in the repo root and/or **`server/.env`**. The server loads **both** (repo root first, then `server/.env` overrides).
 
 ### Install
 
 ```bash
-cd candidate-assistant/server && npm install
+cd server && npm install
 cd ../client && npm install
 ```
 
@@ -72,20 +72,20 @@ cd ../client && npm install
 **Terminal 1 — API + WebSocket**
 
 ```bash
-cd candidate-assistant/server
+cd server
 npm run dev
 ```
 
 **Terminal 2 — Frontend**
 
 ```bash
-cd candidate-assistant/client
+cd client
 npm run dev
 ```
 
 Open the printed local URL (default `http://localhost:5173`). Ensure `CLIENT_ORIGIN` matches the client origin for CORS.
 
-**WebSocket URL.** By default the client connects to `ws://localhost:3001/ws/listen`. To override, add `candidate-assistant/client/.env.local`:
+**WebSocket URL.** By default the client connects to `ws://localhost:3001/ws/listen`. To override, add `client/.env.local`:
 
 ```
 VITE_WS_URL=ws://localhost:3001/ws/listen

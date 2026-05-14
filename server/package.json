@@ -1,5 +1,5 @@
 {
-  "name": "candidate-assistant-server",
+  "name": "mock-interview-server",
   "version": "0.0.1",
   "private": true,
   "type": "module",

@@ -3,9 +3,9 @@ import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
 
 const __configDir = path.dirname(fileURLToPath(import.meta.url));
-/** Monorepo package root (`candidate-assistant/`) — many editors put `.env` here. */
+/** Repository root `.env` (many editors put keys here). */
 dotenv.config({ path: path.resolve(__configDir, "../../.env") });
-/** Server-local overrides (`server/.env`). */
+/** Optional `server/.env` overrides. */
 dotenv.config({ path: path.resolve(__configDir, "../.env") });
 
 export const MIN_WORDS_FOR_QUESTION = 4;
