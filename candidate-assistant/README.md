@@ -100,7 +100,7 @@ VITE_WS_URL=ws://localhost:3001/ws/listen
 | `DEEPGRAM_API_KEY` | Deepgram API key for live STT. If empty, **`MockSTTProvider`** runs. |
 | `GROQ_API_KEY` | Groq API key. If empty, **`MockLLMProvider`** runs. |
 | `GROQ_MODEL` | Groq model id (default `openai/gpt-oss-120b` for detailed interview answers; override if your project uses another id). |
-| `DEEPGRAM_MODEL` | Deepgram live model (default `nova-3`; override if your project uses another id). |
+| `DEEPGRAM_MODEL` | Deepgram live model (default `nova-3-general`; `nova-3` is an alias in the same family on many accounts). |
 | `PORT` | HTTP port (default `3001`). |
 | `CLIENT_ORIGIN` | Allowed CORS origin for the SPA (default `http://localhost:5173`). |
 | `VITE_WS_URL` | (Client) WebSocket URL for `/ws/listen`. |

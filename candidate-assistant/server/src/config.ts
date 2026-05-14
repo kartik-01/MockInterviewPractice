@@ -25,5 +25,9 @@ export const GROQ_API_KEY = process.env.GROQ_API_KEY?.trim() || "";
 export const GROQ_MODEL =
   process.env.GROQ_MODEL?.trim() || "openai/gpt-oss-120b";
 
-/** Default: Nova 3 (lower WER for streaming English vs Nova 2). Override if your project lacks access. */
-export const DEEPGRAM_MODEL = process.env.DEEPGRAM_MODEL?.trim() || "nova-3";
+/**
+ * Default: Nova 3 **general** (explicit id; same family as `nova-3`, tuned for broad English).
+ * Use `nova-3-medical` only for clinical vocabulary.
+ */
+export const DEEPGRAM_MODEL =
+  process.env.DEEPGRAM_MODEL?.trim() || "nova-3-general";
